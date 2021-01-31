@@ -52,7 +52,7 @@ namespace POSRepository
             return _db.Customers.FirstOrDefault(a => a.CustomerId == customerId);
         }
 
-        //Get all Customers
+        //Get All Customers
         public List<Customer> GetCustomers()
         {
             return _db.Customers.ToList();

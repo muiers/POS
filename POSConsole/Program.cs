@@ -12,16 +12,39 @@ namespace POSConsoleTestUI
     {
         static void Main(string[] args)
         {
-            var customerRepo = new CustomerRepository();
-            var customer = new Customer
+            var repo = new ItemRepository();
+            var item = new Item
             {
-                Name = "Rachel Green",
-                ContactNumber = "11111111",
-                Address = "NY",
+                Name = "Street Light",
+                Price = 100,
+                IsActive = true,
+                ItemCategoryId = 1
             };
 
-            customerRepo.AddCustomer(customer);
+            repo.AddItem(item);
             
+            //var customerRepo = new CustomerRepository();
+            //var customer = new Customer
+            //{
+            //    Name = "Rachel Green",
+            //    ContactNumber = "11111111",
+            //    Address = "NY",
+            //};
+
+            //customerRepo.AddCustomer(customer);
+
+            //var customers = customerRepo.GetCustomers();
+
+            //foreach (var item in customers)
+            //{
+            //    Console.WriteLine($"Customer Name: { item.Name}");
+            //}
+
+            //var customer = customerRepo.GetCustomer(1);
+
+            //Console.WriteLine($"Customer Name: { customer.Name}");
+
+
             Console.ReadKey();
         }
     }

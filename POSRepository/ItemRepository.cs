@@ -52,7 +52,7 @@ namespace POSRepository
             return _db.Items.FirstOrDefault(a => a.ItemId == itemId);
         }
 
-        //Get all Items
+        //Get All Items
         public List<Item> GetItems()
         {
             return _db.Items.ToList();
